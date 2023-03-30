@@ -1,0 +1,412 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Carter+One&family=Pacifico&family=Rancho&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #333;
+}
+
+/*----Changement du style de la barre de defilement----*/
+/* Fonctionne sur Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #666666 black;
+}
+
+/* Fonctionne sur Chrome, Edge et Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: black;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #b3b3b3;
+  border-radius: 20px;
+  border: 5px solid black;
+}
+
+.btn, .btn_form {
+  display: block;
+  width: 200px;
+  line-height: 50px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #F1F1F1;
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: Coolvetica;
+  src: url(/Ressources/Fonts/Coolvetica-FontZillion/coolvetica\ rg.ttf);
+}
+body {
+  color: #F1F1F1;
+}
+
+a {
+  text-decoration: none;
+}
+
+.title {
+  font-size: 3rem;
+  margin-left: 5vh;
+  font-family: Coolvetica, sans-serif;
+}
+
+.btn_download {
+  background-color: transparent;
+  border: 2px solid #F1F1F1;
+  color: #F1F1F1;
+}
+
+.btn_form {
+  border: 2px solid #F1F1F1;
+  background-color: transparent;
+  color: #F1F1F1;
+}
+
+.nav__list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background-color: #262626;
+  position: fixed;
+  z-index: 10;
+}
+.nav__link {
+  font-size: 1.2rem;
+  color: white;
+  position: relative;
+  text-decoration: none;
+  line-height: 50px;
+}
+.nav__link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transform: scaleX(0);
+  transition: transform 300ms ease-in-out;
+  transform-origin: right;
+}
+.nav__link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+#cursor-circle {
+  width: 50px;
+  aspect-ratio: 1;
+  border: 1px solid black;
+  border-radius: 50%;
+  position: absolute;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#home {
+  height: 100vh;
+}
+
+.title_home {
+  position: absolute;
+  top: 40%;
+  transformY: translate(-50%);
+}
+
+.scroll-text {
+  position: absolute;
+  bottom: 100px;
+  left: -27px;
+  transform: rotate(-90deg);
+  font-size: 1.2rem;
+}
+
+.arrow-down {
+  display: grid;
+  position: absolute;
+  bottom: 20px;
+  left: 13px;
+  transform: rotate(90eg);
+}
+
+.arrow-down i {
+  margin: -4px 0;
+}
+
+.filligranne-text {
+  position: absolute;
+  z-index: -1;
+  top: 10%;
+  transform: rotate(-15deg);
+  font-size: 50rem;
+  color: #363636;
+}
+
+#formations {
+  margin: 10px;
+}
+
+.formations_list {
+  margin: 50px 0;
+  display: grid;
+  gap: 10px;
+}
+.formations_item {
+  width: 50%;
+  margin: 10px auto;
+  color: #333;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.589);
+}
+.formations_item h3 {
+  font-size: 1.8rem;
+  margin: 0 0 20px;
+}
+
+.modal-container {
+  visibility: hidden;
+  position: fixed;
+  z-index: 11;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(51, 51, 51, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.modal-container .modal {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+  max-width: 900px;
+  min-width: 300px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: black;
+}
+.modal-container .modal .modal-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 16px;
+  border-radius: 50px;
+  background-color: white;
+  color: black;
+}
+.modal-container .modal .modal-header h3.Booki {
+  font-family: "Rancho", cursive;
+  font-size: 3rem;
+  color: #0065fc;
+}
+.modal-container .modal .modal-header .close {
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+.modal-container .modal .modal-body {
+  padding: 20px 0;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {
+    top: 30%;
+    opacity: 0;
+  }
+  to {
+    top: 45%;
+    opacity: 1;
+  }
+}
+.modal-container.active {
+  visibility: visible;
+}
+
+.modal-container.active .modal {
+  animation: animatetop 300ms ease-in-out;
+}
+
+.modal-container:not(.active) {
+  animation: animatetop 300ms ease-in-out;
+}
+
+.card_container {
+  max-width: 1000px;
+  margin-inline: auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  grid-auto-flow: row;
+  gap: 10px;
+}
+
+.card {
+  margin: auto;
+  width: 100%;
+  height: 300px;
+  background-color: red;
+  overflow: hidden;
+  cursor: pointer;
+}
+.card img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 300ms ease-in-out;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+#contact {
+  margin: 200px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-flow: row;
+}
+#contact h2 {
+  grid-columns: 1/3;
+  grid-row: 1/2;
+}
+
+.form {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  margin: auto;
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+.form input,
+.form .textarea {
+  padding: 15px;
+  border-radius: 5px;
+}
+.form .name_label {
+  grid-column: 1/1/2/2;
+}
+.form .name_input {
+  grid-row: 2/1/3/2;
+}
+.form .firstnameLabel {
+  grid-area: 1/2/2/3;
+}
+.form .email_label {
+  grid-area: 3/1/4/3;
+}
+.form .email_input {
+  grid-area: 4/1/5/3;
+}
+.form .message_label {
+  grid-area: 5/1/6/3;
+}
+.form .textarea {
+  grid-area: 6/1/7/3;
+  resize: none;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+.title span {
+  display: inline-block;
+  transition: transform 0.2s ease-in-out;
+}
+.title span:hover {
+  animation: bimp 500ms ease-in-out;
+}
+
+.title span:not(:hover) {
+  transition-delay: 1.3s;
+}
+
+@keyframes bimp {
+  0%, 100% {
+    transform: scaleX(1) scaleY(1);
+  }
+  10%, 90% {
+    transform: scaleX(0.8) scaleY(1.2);
+  }
+  50%, 75% {
+    transform: scaleX(1.3) scaleY(0.8);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,14 @@
+%btn {
+    display: block;
+    width: 200px;
+    line-height: 50px;
+    border-radius: $btn-radius;
+    text-align: center;
+    background-color: $white;
+    cursor: pointer;
+}
+
+%grid-center {
+    display: grid;
+    place-items: center;
+}

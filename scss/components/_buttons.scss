@@ -1,0 +1,17 @@
+.btn_download {
+    background-color: transparent;
+    border: 2px solid $white;
+    color: $white
+}
+
+.btn_form {
+    @extend %btn;
+
+    border: 2px solid $white;
+    background-color: transparent;
+    color: $white
+}
+
+.btn {
+    @extend %btn;
+}

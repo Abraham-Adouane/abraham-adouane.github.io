@@ -1,0 +1,57 @@
+#cursor-circle {
+    width: 50px;
+    aspect-ratio: 1;
+    border: 1px solid black;
+    border-radius: 50%;
+    position: absolute;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#home {
+    height: 100vh;
+}
+
+
+
+.title_home {
+
+    position: absolute;
+    top: 40%;
+    transformY: translate(-50%);
+}
+
+
+.scroll-text {
+    position: absolute;
+    bottom: 100px;
+    left: -27px;
+    transform: rotate(-90deg);
+    font-size: 1.2rem;
+}
+
+.arrow-down {
+    display: grid;
+    position: absolute;
+    bottom: 20px;
+    left: 13px;
+    transform: rotate(90eg);
+}
+
+.arrow-down i {
+    margin: -4px 0;
+}
+
+.filligranne-text {
+    position: absolute;
+    z-index: -1;
+    top: 10%;
+    // left: 20%;
+    transform: rotate(-15deg);
+
+
+    font-size: 50rem;
+    color: lighten($bg-color, 1%)
+}

@@ -1,0 +1,122 @@
+// overlay
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Pacifico&family=Rancho&display=swap');
+
+
+
+
+
+.modal-container {
+    visibility: hidden;
+    position: fixed;
+    z-index: 11;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(51, 51, 51, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    .modal {
+
+        @include pos-center(50%, 45%);
+        width: 95%;
+        max-width: 900px;
+        min-width: 300px;
+        @include rounded(10px);
+        padding: 10px;
+        background-color: black;
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            padding: 2px 16px;
+            @include rounded(50px);
+            background-color: white;
+            color: black;
+
+            h3.Booki {
+                font-family: 'Rancho', cursive;
+                font-size: 3rem;
+                color: #0065fc;
+            }
+
+            .close {
+                display: grid;
+                place-items: center;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background-color: black;
+                color: white;
+                cursor: pointer;
+            }
+        }
+
+        .modal-body {
+            padding: 20px 0;
+        }
+
+    }
+
+}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {
+        top: 30%;
+        opacity: 0
+    }
+
+    to {
+        top: 45%;
+        opacity: 1
+    }
+}
+
+
+.modal-container.active {
+    visibility: visible;
+}
+
+.modal-container.active .modal {
+    animation: animatetop 300ms ease-in-out;
+}
+
+
+.modal-container:not(.active) {
+    animation: animatetop 300ms ease-in-out;
+
+}
+
+
+.card_container {
+    max-width: 1000px;
+    margin-inline: auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    // grid-template-row: repeat(3, 400px);
+    text-align: center;
+    grid-auto-flow: row;
+    gap: 10px;
+}
+
+.card {
+    margin: auto;
+    width: 100%;
+    height: 300px;
+    background-color: red;
+    overflow: hidden;
+    cursor: pointer;
+
+    img {
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        height: 100%;
+        transition: transform 300ms ease-in-out;
+    }
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}

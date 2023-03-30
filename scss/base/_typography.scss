@@ -1,0 +1,20 @@
+@font-face {
+    font-family: Coolvetica;
+    src: url(/Ressources/Fonts/Coolvetica-FontZillion/coolvetica\ rg.ttf);
+}
+
+
+body {
+    color: $white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.title {
+    font-size: 3rem;
+    margin-left: 5vh;
+    font-family: Coolvetica, sans-serif;
+
+}

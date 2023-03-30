@@ -1,0 +1,10 @@
+@mixin pos-center($x: 50%, $y: 50%) {
+    position: absolute;
+    top: $y;
+    left: $x;
+    transform: translate(-50%, -50%);
+}
+
+@mixin rounded($radius: 5px) {
+    border-radius: $radius;
+}

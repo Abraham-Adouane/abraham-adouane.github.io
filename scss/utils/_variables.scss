@@ -1,0 +1,42 @@
+$primary-color: blue;
+$secondary-color: blue;
+$tertiary-color: blue;
+$bg-color : #333;
+$white : #F1F1F1;
+
+$btn-radius : 5px;
+$ff-title: a;
+$fs-title: 10px;
+
+:root {
+    scroll-behavior: smooth;
+
+}
+
+body {
+    background-color: $bg-color;
+}
+
+
+
+/*----Changement du style de la barre de defilement----*/
+/* Fonctionne sur Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: lighten($bg-color, 20%) darken($bg-color, 20%);
+}
+
+/* Fonctionne sur Chrome, Edge et Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: darken($bg-color, 20%);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: lighten($bg-color, 50%);
+    border-radius: 20px;
+    border: 5px solid darken($bg-color, 20%);
+}
