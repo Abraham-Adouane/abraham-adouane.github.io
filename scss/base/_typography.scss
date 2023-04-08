@@ -13,7 +13,7 @@ a {
 }
 
 .title {
-    font-size: 3rem;
+    font-size: clamp(2rem, 4vw, 5rem);
     margin-left: 5vh;
     font-family: Coolvetica, sans-serif;
 

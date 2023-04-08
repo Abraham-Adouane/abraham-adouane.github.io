@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css2?family=Carter+One&family=Pacifico&family=Rancho&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Carter+One&family=Pacifico&family=Rancho&family=Shrikhand&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -106,7 +106,7 @@ a {
 }
 
 .title {
-  font-size: 3rem;
+  font-size: clamp(2rem, 4vw, 5rem);
   margin-left: 5vh;
   font-family: Coolvetica, sans-serif;
 }
@@ -115,6 +115,7 @@ a {
   background-color: transparent;
   border: 2px solid #F1F1F1;
   color: #F1F1F1;
+  margin: 50px auto;
 }
 
 .btn_form {
@@ -123,14 +124,54 @@ a {
   color: #F1F1F1;
 }
 
-.nav__list {
+.btn {
+  position: relative;
+  transition: color 300ms ease;
+}
+
+.btn:hover {
+  color: black;
+}
+
+.btn::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
   width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 300ms ease-in-out;
+}
+
+.btn:hover::before {
+  transform: scale(1);
+  transform-origin: left;
+}
+
+.nav {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  line-height: 80px;
+  background-color: #262626;
+  transition: all 300ms ease;
+}
+.nav.hidden {
+  transform: translatey(-80px);
+}
+.nav__list {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  background-color: #262626;
-  position: fixed;
-  z-index: 10;
+  width: 100%;
+  gap: 20px;
+  padding: 0;
+}
+.nav__item {
+  list-style-type: none;
 }
 .nav__link {
   font-size: 1.2rem;
@@ -154,14 +195,6 @@ a {
 .nav__link:hover::after {
   transform: scaleX(1);
   transform-origin: left;
-}
-
-#cursor-circle {
-  width: 50px;
-  aspect-ratio: 1;
-  border: 1px solid black;
-  border-radius: 50%;
-  position: absolute;
 }
 
 body {
@@ -231,11 +264,15 @@ body {
 }
 
 .modal-container {
+  z-index: 2;
   visibility: hidden;
   position: fixed;
-  z-index: 11;
   width: 100vw;
   height: 100vh;
+}
+.modal-container .overlay {
+  width: 100%;
+  height: 100%;
   background-color: rgba(51, 51, 51, 0.75);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -245,33 +282,37 @@ body {
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 95%;
+  width: 90%;
   max-width: 900px;
   min-width: 300px;
   border-radius: 10px;
-  padding: 10px;
-  background-color: black;
+  padding: 10px 20px;
+  background-color: #f1f1f1;
+  color: #333;
+  border: 1px solid #333;
+  box-shadow: 4px 4px 10px rgba(3, 3, 3, 0.7529411765);
 }
 .modal-container .modal .modal-header {
   display: flex;
   justify-content: space-between;
   padding: 2px 16px;
-  border-radius: 50px;
-  background-color: white;
-  color: black;
 }
-.modal-container .modal .modal-header h3.Booki {
-  font-family: "Rancho", cursive;
+.modal-container .modal .modal-header h3 {
   font-size: 3rem;
-  color: #0065fc;
+  width: 100%;
 }
 .modal-container .modal .modal-header .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
   display: grid;
   place-items: center;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background-color: black;
+  font-size: 30px;
+  font-weight: bold;
   color: white;
   cursor: pointer;
 }
@@ -295,10 +336,6 @@ body {
 }
 
 .modal-container.active .modal {
-  animation: animatetop 300ms ease-in-out;
-}
-
-.modal-container:not(.active) {
   animation: animatetop 300ms ease-in-out;
 }
 
@@ -381,30 +418,25 @@ body {
   resize: none;
 }
 
-h1 {
-  font-size: 5rem;
-}
-
-.title span {
+span.bounce {
   display: inline-block;
   transition: transform 0.2s ease-in-out;
 }
-.title span:hover {
-  animation: bimp 500ms ease-in-out;
+span.bounce:hover {
+  color: red;
+}
+span.bounce.animate {
+  animation: letter-bounce 500ms ease-in-out;
 }
 
-.title span:not(:hover) {
-  transition-delay: 1.3s;
-}
-
-@keyframes bimp {
+@keyframes letter-bounce {
   0%, 100% {
     transform: scaleX(1) scaleY(1);
   }
-  10%, 90% {
+  20%, 80% {
     transform: scaleX(0.8) scaleY(1.2);
   }
-  50%, 75% {
+  40%, 60% {
     transform: scaleX(1.3) scaleY(0.8);
   }
 }

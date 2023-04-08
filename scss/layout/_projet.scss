@@ -1,51 +1,67 @@
-// overlay
-@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Pacifico&family=Rancho&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Pacifico&family=Rancho&family=Shrikhand&display=swap');
 
 
 
 
 .modal-container {
+    z-index: 2;
     visibility: hidden;
     position: fixed;
-    z-index: 11;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(51, 51, 51, 0.75);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+
+
+
+    .overlay {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(51, 51, 51, 0.75);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
 
     .modal {
 
         @include pos-center(50%, 45%);
-        width: 95%;
+
+        width: 90%;
         max-width: 900px;
         min-width: 300px;
         @include rounded(10px);
-        padding: 10px;
-        background-color: black;
+        padding: 10px 20px;
+        background-color: #f1f1f1;
+        color: #333;
+        border: 1px solid #333;
+        box-shadow: 4px 4px 10px #030303c0;
+
 
         .modal-header {
             display: flex;
             justify-content: space-between;
             padding: 2px 16px;
-            @include rounded(50px);
-            background-color: white;
-            color: black;
 
-            h3.Booki {
-                font-family: 'Rancho', cursive;
+
+
+            h3 {
                 font-size: 3rem;
-                color: #0065fc;
+                width: 100%;
+
             }
 
+
+
             .close {
+                position: absolute;
+                top: 10px;
+                right: 10px;
                 display: grid;
                 place-items: center;
-                width: 20px;
-                height: 20px;
+                width: 30px;
+                height: 30px;
                 border-radius: 50%;
                 background-color: black;
+                font-size: 30px;
+                font-weight: bold;
                 color: white;
                 cursor: pointer;
             }
@@ -54,9 +70,7 @@
         .modal-body {
             padding: 20px 0;
         }
-
     }
-
 }
 
 /* Add Animation */
@@ -82,10 +96,10 @@
 }
 
 
-.modal-container:not(.active) {
-    animation: animatetop 300ms ease-in-out;
+// .modal-container:not(.active) {
+//     animation: animatetop 300ms ease-in-out;
 
-}
+// }
 
 
 .card_container {

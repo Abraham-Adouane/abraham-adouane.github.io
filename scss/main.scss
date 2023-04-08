@@ -13,44 +13,40 @@
 
 
 
-h1 {
-    font-size: 5rem;
-}
 
 
 
-.title span {
+span.bounce {
     display: inline-block;
     transition: transform 0.2s ease-in-out;
 
     &:hover {
+        color: red;
+    }
+
+    &.animate {
 
 
-        animation: bimp 500ms ease-in-out;
+        animation: letter-bounce 500ms ease-in-out;
     }
 
 }
 
-.title span:not(:hover) {
-    transition-delay: 1.3s;
-    // transform: translateY(0) scale(1);
-}
 
-
-@keyframes bimp {
+@keyframes letter-bounce {
 
     0%,
     100% {
         transform: scaleX(1) scaleY(1);
     }
 
-    10%,
-    90% {
+    20%,
+    80% {
         transform: scaleX(0.8) scaleY(1.2);
     }
 
-    50%,
-    75% {
+    40%,
+    60% {
         transform: scaleX(1.3) scaleY(0.8);
     }
 

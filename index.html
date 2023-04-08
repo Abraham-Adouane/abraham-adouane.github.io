@@ -13,15 +13,16 @@
 </head>
 
 <body>
-    <div class="modal-container modal-trigger">
-        <!-- <div class="overlay modal-trigger"></div> -->
+    <div class="modal-container">
+        <div class="overlay modal-trigger"></div>
         <div class="modal">
             <header class="modal-header">
-                <h3 class="Booki">Booki</h3>
+                <h3 class="modalTitle Booki"></h3>
                 <span class="close modal-trigger">&times;</span>
             </header>
             <div class="modal-body">
-                <p>bathtub mint julep i had to sell the trigger and most of the handle to feed my family bumbled-bee
+                <p class="modalDescription">bathtub mint julep i had to sell the trigger and most of the handle to feed
+                    my family bumbled-bee
                     unfaceuptoable doobob pollutinest nothing can possi-blye go wrong tomacco ku klux klam dungeonarium
                     debigulator scotchtoberfest crayola oblongata your homemade liquor is exploding again. frinkahedron
                     mysterious liquor clouds smarch embiggen that's why your robot never worked paradigm bachelor arms
@@ -39,7 +40,10 @@
                     group jiminy jillikers speedholes mono = one please, kill me. snacktacular banana kaboom boostafazoo
                     poochie death threats suck like a fox such a violent motif</p>
 
-                <a href="https://abraham-adouane.github.io/P2-Booki/" target="_blank" class="btn">Visiter ce projet</a>
+
+
+                <a href="https://abraham-adouane.github.io/P2-Booki/" target="_blank" class="btn">Visiter
+                    ce projet</a>
             </div>
         </div>
     </div>
@@ -49,13 +53,12 @@
                 <li class="nav__item"><a class="nav__link" href="#">Acceuil</a></li>
                 <li class="nav__item"><a class="nav__link" href="#">About</a></li>
                 <li class="nav__item"><a class="nav__link" href="#projet">Projet</a></li>
-                <li class="nav__item"><a class="nav__link" href="#">rfdthg</a></li>
                 <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     <section id="home">
-        <h1 class="title title_home" id="element"></h1>
+        <h1 class="title title_home" id="element" aria-label="Bonjour, je suis Abraham ADOUANE, developpeur web"></h1>
         <p class="filligranne-text"><i class="fa-solid fa-code"></i></p>
         <p class="scroll-text"> Scroll down
         </p>
@@ -67,7 +70,11 @@
         </div>
     </section>
     <section id="formations">
-        <h2 class="title">Mes formations</h2>
+        <h2 aria-label="Mes formations" class="title formationsTitle "><span class="bounce">M</span><span
+                class="bounce">e</span><span class="bounce">s</span> <span class="bounce">f</span><span
+                class="bounce">o</span><span class="bounce">r</span><span class="bounce">m</span><span
+                class="bounce">a</span><span class="bounce">t</span><span class="bounce">i</span><span
+                class="bounce">o</span><span class="bounce">n</span><span class="bounce">s</span></h2>
         <ul class="formations_list">
             <li class="formations_item">
                 <h3>Développeur web et mobile</h3>
@@ -95,36 +102,36 @@
     <section id="projet">
         <h2 class="title title_project">Mes projets web</h2>
         <div class="card_container">
-            <div class="card modal-trigger" id="modal1">
+            <div class="card modal-trigger" data-title="Booki">
                 <img src="/Ressources/Pictures/Projet/Booki/booki 2.jpg" alt="">
             </div>
-            <div class="card">
+            <div class="card modal-trigger" data-title="Ohmyfood">
                 <img src="Ressources/Pictures/Projet/ohmyfood/Capture d’écran 2023-03-28 142619.jpg" alt="">
             </div>
-            <div class="card">
+            <div class="card modal-trigger" data-title="Georgia restaurant">
                 <img src="/ressources/Pictures/Projet/Georgia/georgia_acceuil.jpg" alt="">
             </div>
-            <div class="card">
+            <div class="card modal-trigger" data-title="Card 4">
                 <img src="Ressources/Pictures/Projet/Sushi restaurant/Capture d’écran 2023-03-28 143105.jpg" alt="">
             </div>
-            <div class="card">
+            <div class="card modal-trigger" data-title="card 5">
                 <img src="/Ressources/Pictures/Projet/Meteo/meteo1.jpg" alt="">
             </div>
-            <div class="card"></div>
+            <div class="card modal-trigger" data-title="card 6"></div>
         </div>
 
     </section>
     <section>
 
         <div>
-            <a class="btn" href="Ressources/CV_ADOUANE_Abraham_Developpeur 2.pdf" download><i
+            <a class="btn btn_download" href="Ressources/CV_ADOUANE_Abraham_Developpeur 2.pdf" download><i
                     class="fa-solid fa-download"></i> Télécharger mon CV</a>
         </div>
     </section>
     <section id="contact">
         <h2 class="title mainTitle">Vous pouvez me contacter : </h2>
 
-        <form class="form" action="">
+        <form class="form" action="script/form-contact.php" method="post">
             <label class="name_label" for="name"></label>
             <input class="name_input" type="text" id="name" placeholder="Nom">
             <label class="firstnameLabel" for="firstName"></label>
@@ -133,7 +140,7 @@
             <input class="email_input" type="email" id="email" placeholder="Email">
             <label class="message_label" for="message"></label>
             <textarea class="textarea" name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-            <button class="btn_form" type="submit">Envoyer</button>
+            <button class="btn btn_form" type="submit">Envoyer</button>
         </form>
     </section>
 
