@@ -21,7 +21,7 @@ span.bounce {
     transition: transform 0.2s ease-in-out;
 
     &:hover {
-        color: red;
+        color: rgb(152, 177, 243);
     }
 
     &.animate {
@@ -51,4 +51,8 @@ span.bounce {
     }
 
 
+}
+
+body {
+    overflow-x: hidden;
 }

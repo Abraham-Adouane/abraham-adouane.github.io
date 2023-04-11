@@ -1,28 +1,50 @@
 #contact {
-    margin: 200px 0;
+    // width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-flow: row;
+    margin: 200px auto;
+    max-width: 1200px;
+    padding: 0 50px;
 
-    h2 {
-        grid-columns: 1/3;
-        grid-row: 1/2;
-    }
+
 }
 
+.form-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media screen and (width<800px) {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+.fa-envelope {
+    z-index: -1;
+    margin: auto;
+    color: darken($bg-color, 5%);
+    font-size: 20rem;
+    transform: rotate(15deg);
+
+
+}
 
 .form {
-    grid-column: 2/3;
-    grid-row: 2/3;
+    width: 100%;
     margin: auto;
-    width: 50%;
+
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 5px;
 
+
+
+
+
+
     input,
     .textarea {
-        // height: 20px;
+
         padding: 15px;
         border-radius: 5px;
     }

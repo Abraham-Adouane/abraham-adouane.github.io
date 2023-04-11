@@ -1,0 +1,61 @@
+[
+    {
+        "nom" : "Booki",
+        "pictures" : "Ressources/Pictures/Projet/Booki/booki 2.jpg",
+        "description":"Projet 2 parcours Développeur web chez OpenClassrooms. Integration d'une maquette. (HTML, CSS)",
+        "techno":"html, css",
+        "titleFont":"'Rancho', cursive",
+        "titleColor":"#0065fc",
+        "link":"https://abraham-adouane.github.io/P2-Booki/"
+},
+    {
+        "nom" : "Georgia restaurant",
+        "pictures" : "Ressources/Pictures/Projet/Georgia/georgia_acceuil.jpg",
+        "description": "Integration à partir d'une maquette. Utilisation de html , sass",
+        "techno":"Bootstrap",
+        "titleFont":"'Shrikhand', cursive",
+        "titleColor":"red",
+        "link":"https://abraham-adouane.github.io/Georgia-restaurant/"
+},
+    {
+        "nom" : "Ohmyfood",
+        "pictures" : "Ressources/Pictures/Projet/ohmyfood/ohmyfood.jpg",
+        "description": "Projet 3 parcours Développeur web chez OpenClassrooms. Clone d'un site (HTML, CSS)",
+        "techno":"[html, css]",
+        "titleFont":"'Shrikhand', cursive",
+        "titleColor":"black",
+        "link":"https://abraham-adouane.github.io/P3-ohmyfood/"
+},
+    {
+        "nom" : "Restaurant japonais",
+        "pictures" : "",
+        "description":"rere",
+        "titleFont":"'Shrikhand', cursive",
+        "titleColor":"red",
+        "link":""
+},
+    {
+        "nom" : "App Meteo",
+        "pictures": "Ressources/Pictures/Projet/Meteo/meteo1.jpg",
+        "description":"Creation d'un widget meteo avec l'api Openweather. Utilisation de html css, Javascript",
+        "titleFont":"'Shrikhand', cursive",
+        "titleColor":"red",
+        "link":""
+},
+    {
+        "nom" : "Gestionnaire de bibliothèque",
+        "pictures": "Ressources/Pictures/Projet/Booklist/Booklist.jpg",
+        "description":"Ce projet est une application web permettant de gérer une liste de livres dans une bibliothèque. Les utilisateurs peuvent ajouter de nouveaux livres en spécifiant leur titre, leur auteur et leur année de publication. Les livres ajoutés sont ensuite affichés dans un tableau avec leurs informations correspondantes. ",
+        "titleFont":"'Shrikhand', cursive",
+        "titleColor":"red",
+        "link":"https://abraham-adouane.github.io/Booklist/"
+},
+{
+    "nom" : "Recherche Wikipedia",
+    "pictures": "Ressources/Pictures/Projet/WikiSearch/wiki.jpg",
+    "description":"Ce projet est une page de recherche Wikipedia qui permet aux utilisateurs de rechercher des articles sur Wikipedia en utilisant un formulaire de recherche. La page a un en-tête avec un logo Wikipedia et un titre accrocheur, suivis d'un formulaire de recherche où les utilisateurs peuvent saisir leur recherche. Les résultats de la recherche sont affichés dans une liste d'articles sous forme de cartes. Une animation de chargement est également incluse pour améliorer l'expérience utilisateur. Le code utilise les langages HTML, CSS et JavaScript pour implémenter la fonctionnalité de recherche et la mise en page réactive. ",
+    "titleFont":"'Shrikhand', cursive",
+    "titleColor":"black",
+    "link":"https://abraham-adouane.github.io/Wiki-Search/"
+}
+]

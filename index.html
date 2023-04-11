@@ -9,10 +9,10 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/6e2cd958b0.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 
 <body>
+    <!-- <div class="wrapper"> -->
     <div class="modal-container">
         <div class="overlay modal-trigger"></div>
         <div class="modal">
@@ -21,45 +21,37 @@
                 <span class="close modal-trigger">&times;</span>
             </header>
             <div class="modal-body">
-                <p class="modalDescription">bathtub mint julep i had to sell the trigger and most of the handle to feed
-                    my family bumbled-bee
-                    unfaceuptoable doobob pollutinest nothing can possi-blye go wrong tomacco ku klux klam dungeonarium
-                    debigulator scotchtoberfest crayola oblongata your homemade liquor is exploding again. frinkahedron
-                    mysterious liquor clouds smarch embiggen that's why your robot never worked paradigm bachelor arms
-                    grandpas little helper worst episode ever. eyeball stew lord protect this rocket house eat my shirt
-                    crayola oblongata diddly sandal-wearing goldfish tenders grandpas little helper pollutinest
-                    suspicious
-                    aloysius crantastic chester a. arthritis that's why your robot never worked your older, balder,
-                    fatter
-                    son shiva h. vishnu dodgerock esquilax uncle ant neglecterino pointy kitty my son is also named bort
-                    snacktacular invisible dog leash dirty, maybe. dangerous, hardly. fireworks factory purple is a
-                    fruit
-                    there's no need to murmur poochie death threats mysterious liquor clouds capdabbler bolognium
-                    invisible
-                    dog leash perspicacity dirty, maybe. dangerous, hardly. death sports unpossible smarch the congealed
-                    group jiminy jillikers speedholes mono = one please, kill me. snacktacular banana kaboom boostafazoo
-                    poochie death threats suck like a fox such a violent motif</p>
 
-
-
-                <a href="https://abraham-adouane.github.io/P2-Booki/" target="_blank" class="btn">Visiter
-                    ce projet</a>
             </div>
         </div>
     </div>
     <header>
         <nav class="nav">
             <ul class="nav__list">
-                <li class="nav__item"><a class="nav__link" href="#">Acceuil</a></li>
-                <li class="nav__item"><a class="nav__link" href="#">About</a></li>
+                <li class="nav__item"><a class="nav__link" href="#home">Acceuil</a></li>
+                <li class="nav__item"><a class="nav__link" href="#formations">Formations</a></li>
                 <li class="nav__item"><a class="nav__link" href="#projet">Projet</a></li>
                 <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
             </ul>
+            <div class="toggleMenu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
         </nav>
     </header>
     <section id="home">
-        <h1 class="title title_home" id="element" aria-label="Bonjour, je suis Abraham ADOUANE, developpeur web"></h1>
-        <p class="filligranne-text"><i class="fa-solid fa-code"></i></p>
+        <div class="mediaContainer">
+            <a class="mediaLink" href="https://www.linkedin.com/in/abraham-adouane" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a class="mediaLink" href="https://github.com/Abraham-Adouane" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+        <h1 class="title title_home" id="element" aria-label="Bonjour, je suis Abraham ADOUANE, developpeur web">
+        </h1>
+        <img src="Ressources/Pictures/Background/20230323_183820.jpg" alt="">
         <p class="scroll-text"> Scroll down
         </p>
         <div class="arrow-down">
@@ -70,11 +62,11 @@
         </div>
     </section>
     <section id="formations">
-        <h2 aria-label="Mes formations" class="title formationsTitle "><span class="bounce">M</span><span
-                class="bounce">e</span><span class="bounce">s</span> <span class="bounce">f</span><span
-                class="bounce">o</span><span class="bounce">r</span><span class="bounce">m</span><span
-                class="bounce">a</span><span class="bounce">t</span><span class="bounce">i</span><span
-                class="bounce">o</span><span class="bounce">n</span><span class="bounce">s</span></h2>
+        <h2 aria-label="Mes formations"><span class="bounce">M</span><span class="bounce">e</span><span
+                class="bounce">s</span> <span class="bounce">f</span><span class="bounce">o</span><span
+                class="bounce">r</span><span class="bounce">m</span><span class="bounce">a</span><span
+                class="bounce">t</span><span class="bounce">i</span><span class="bounce">o</span><span
+                class="bounce">n</span><span class="bounce">s</span></h2>
         <ul class="formations_list">
             <li class="formations_item">
                 <h3>Développeur web et mobile</h3>
@@ -100,51 +92,62 @@
     </section>
 
     <section id="projet">
-        <h2 class="title title_project">Mes projets web</h2>
+        <h2>Mes projets web</h2>
         <div class="card_container">
             <div class="card modal-trigger" data-title="Booki">
-                <img src="/Ressources/Pictures/Projet/Booki/booki 2.jpg" alt="">
+                <p>Booki</p>
+                <img src="Ressources/Pictures/Projet/Booki/booki 2.jpg" alt="">
             </div>
             <div class="card modal-trigger" data-title="Ohmyfood">
-                <img src="Ressources/Pictures/Projet/ohmyfood/Capture d’écran 2023-03-28 142619.jpg" alt="">
+                <p>Ohmyfood</p>
+                <img src="Ressources/Pictures/Projet/ohmyfood/ohmyfood.jpg" alt="">
             </div>
             <div class="card modal-trigger" data-title="Georgia restaurant">
-                <img src="/ressources/Pictures/Projet/Georgia/georgia_acceuil.jpg" alt="">
+                <p>Georgia restaurant</p>
+                <img src="Ressources/Pictures/Projet/Georgia/georgia_acceuil.jpg" alt="">
             </div>
-            <div class="card modal-trigger" data-title="Card 4">
-                <img src="Ressources/Pictures/Projet/Sushi restaurant/Capture d’écran 2023-03-28 143105.jpg" alt="">
+            <div class="card modal-trigger" data-title="Recherche Wikipedia">
+                <p>Recherche Wikipedia</p>
+                <img src="Ressources/Pictures/Projet/WikiSearch/wiki.jpg" alt="">
             </div>
-            <div class="card modal-trigger" data-title="card 5">
-                <img src="/Ressources/Pictures/Projet/Meteo/meteo1.jpg" alt="">
+            <div class="card modal-trigger" data-title="App Meteo">
+                <p>App Meteo</p>
+                <img src="Ressources/Pictures/Projet/Meteo/meteo1.jpg" alt="">
             </div>
-            <div class="card modal-trigger" data-title="card 6"></div>
+            <div class="card modal-trigger" data-title="Gestionnaire de bibliothèque">
+                <p>Gestionnaire de bibliothèque</p>
+                <img src="Ressources/Pictures/Projet/Booklist/Booklist.jpg" alt="">
+            </div>
         </div>
 
+        <a class="btn btn_download" href="Ressources/CV_ADOUANE_Abraham_Developpeur 2.pdf" download><i
+                class="fa-solid fa-download"></i>Télécharger mon CV</a>
     </section>
-    <section>
 
-        <div>
-            <a class="btn btn_download" href="Ressources/CV_ADOUANE_Abraham_Developpeur 2.pdf" download><i
-                    class="fa-solid fa-download"></i> Télécharger mon CV</a>
-        </div>
-    </section>
+
     <section id="contact">
-        <h2 class="title mainTitle">Vous pouvez me contacter : </h2>
+        <h2>Me contacter : </h2>
+        <div class="form-container">
+            <i class="fa-solid fa-envelope"></i>
 
-        <form class="form" action="script/form-contact.php" method="post">
-            <label class="name_label" for="name"></label>
-            <input class="name_input" type="text" id="name" placeholder="Nom">
-            <label class="firstnameLabel" for="firstName"></label>
-            <input class="firstNameInput" type="text" id="firstName" placeholder="Prénom">
-            <label class="email_label" for="email"></label>
-            <input class="email_input" type="email" id="email" placeholder="Email">
-            <label class="message_label" for="message"></label>
-            <textarea class="textarea" name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-            <button class="btn btn_form" type="submit">Envoyer</button>
-        </form>
+
+            <form class="form" action="script/form-contact.php" method="post">
+                <label class="name_label" for="name"></label>
+                <input class="name_input" type="text" name="nom" id="name" placeholder="Nom">
+                <label class="firstnameLabel" for="firstName"></label>
+                <input class="firstNameInput" name="prenom" type="text" id="firstName" placeholder="Prénom">
+                <label class="email_label" for="email"></label>
+                <input class="email_input" type="email" id="email" name="email" placeholder="Email">
+                <label class="message_label" for="message"></label>
+                <textarea class="textarea" name="message" id="message" cols="30" rows="10"
+                    placeholder="Message"></textarea>
+                <button class="btn btn_form" type="submit">Envoyer</button>
+            </form>
+        </div>
     </section>
 
-    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="script/app.js"></script>
 </body>
 
 </html>

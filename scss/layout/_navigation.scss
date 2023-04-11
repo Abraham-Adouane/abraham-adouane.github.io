@@ -7,6 +7,8 @@
     position: fixed;
     z-index: 1;
     width: 100%;
+    left: 0;
+    height: 80px;
     line-height: 80px;
     background-color: darken($bg-color, 5%);
     transition: all 300ms ease;
@@ -26,6 +28,20 @@
         gap: 20px;
         padding: 0;
 
+        @media screen and (max-width: 800px) {
+            display: none;
+            position: absolute;
+            top: -300px;
+            transition: transform 1s ease-in-out;
+
+            &--active {
+                display: grid;
+                background-color: darken($bg-color, 5%);
+                transform: translatey(300px);
+            }
+
+        }
+
     }
 
     &__item {
@@ -33,7 +49,7 @@
     }
 
     &__link {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         color: white;
         position: relative;
         text-decoration: none;
@@ -59,4 +75,54 @@
         }
     }
 
+
+    .toggleMenu {
+        display: none;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 50%;
+        transform: translatey(-50%);
+        right: 20px;
+        background-color: white;
+        border-radius: 5px;
+        cursor: pointer;
+
+        @media screen and (width<800px) {
+            display: block;
+        }
+
+        &:hover {
+            background-color: rgb(143, 142, 142)
+        }
+
+        .line {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 5px;
+            background-color: black;
+            border-radius: 10px;
+
+            &:first-child {
+                top: 25%
+            }
+
+            &:last-child {
+                top: 75%;
+
+            }
+
+        }
+
+        &.active {
+            .line {
+                &:first-child {
+                    transform: translate();
+                }
+            }
+        }
+    }
 }
