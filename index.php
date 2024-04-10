@@ -61,6 +61,10 @@
 
         </div>
     </section>
+    <?php
+    echo ('test');
+    
+    ?>
     <section id="formations">
         <h2 aria-label="Mes formations"><span class="bounce">M</span><span class="bounce">e</span><span
                 class="bounce">s</span> <span class="bounce">f</span><span class="bounce">o</span><span
@@ -120,7 +124,7 @@
             </div>
         </div>
 
-        <a class="btn btn_download" href="Ressources/CV_ADOUANE_Abraham_Developpeur 2.pdf" download><i
+        <a class="btn btn_download" href="Ressources/CV_ADOUANE_Abraham_Developpeur.pdf" download><i
                 class="fa-solid fa-download"></i>Télécharger mon CV</a>
     </section>
 
